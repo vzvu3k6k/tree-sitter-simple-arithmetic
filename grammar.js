@@ -9,7 +9,7 @@ module.exports = grammar({
     plus_op: $ => '+',
     minus_op: $ => '-',
 
-    unary: $ => seq($.negative_op, $.node),
+    unary: $ => prec(1, seq($.negative_op, $.node)),
     negative_op: $ => '-',
 
     number: $ => /(0|[1-9]\d+)/
