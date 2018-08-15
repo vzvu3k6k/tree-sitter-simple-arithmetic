@@ -1,0 +1,15 @@
+{
+  "name": "tree-sitter-simple-arithmetic",
+  "version": "0.0.1",
+  "description": "Simple arithmetic grammer for tree-sitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vzvu3k6k <vzvu3k6k@gmail.com>",
+  "license": "CC0-1.0",
+  "private": true,
+  "devDependencies": {
+    "tree-sitter-cli": "^0.13.6"
+  }
+}
