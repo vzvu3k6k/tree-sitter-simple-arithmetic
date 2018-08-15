@@ -7,3 +7,23 @@ number
 ---
 
 (source_file (node (number)))
+
+==================
+zero
+==================
+
+0
+
+---
+
+(source_file (node (number)))
+
+==================
+preceding zero
+==================
+
+01
+
+---
+
+(source_file (node (number)) (ERROR (UNEXPECTED '\n')))

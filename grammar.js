@@ -6,6 +6,6 @@ module.exports = grammar({
     node: $ => choice($.unary, $.number),
     unary: $ => seq($.negative_operator, $.node),
     negative_operator: $ => '-',
-    number: $ => /\d+/
+    number: $ => /(0|[1-9]\d+)/
   }
 });
