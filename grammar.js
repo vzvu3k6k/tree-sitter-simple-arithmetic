@@ -4,8 +4,8 @@ module.exports = grammar({
   rules: {
     source_file: $ => $.node,
     node: $ => choice($.unary, $.number),
-    unary: $ => seq($.negative_operator, $.node),
-    negative_operator: $ => '-',
+    unary: $ => seq($.negative_op, $.node),
+    negative_op: $ => '-',
     number: $ => /(0|[1-9]\d+)/
   }
 });

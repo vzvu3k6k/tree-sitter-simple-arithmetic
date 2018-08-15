@@ -6,4 +6,4 @@ negative number
 
 ---
 
-(source_file (node (unary (negative_operator) (node (number)))))
+(source_file (node (unary (negative_op) (node (number)))))
