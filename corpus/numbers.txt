@@ -1,9 +1,9 @@
 ==================
-natural number
+number
 ==================
 
-1
+1729
 
 ---
 
-(source_file (number))
+(source_file (node (number)))

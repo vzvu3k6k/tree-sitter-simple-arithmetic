@@ -1,0 +1,9 @@
+==================
+negative number
+==================
+
+-1729
+
+---
+
+(source_file (node (unary (negative_operator) (node (number)))))
