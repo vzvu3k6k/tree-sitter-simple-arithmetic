@@ -1,0 +1,9 @@
+==================
+natural number
+==================
+
+1
+
+---
+
+(source_file (number))
