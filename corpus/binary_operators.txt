@@ -1,0 +1,9 @@
+==================
+plus and minus
+==================
+
+1 + 2
+
+---
+
+(source_file (node (binary (node number) (binary_plus_operator) (node (number)))))

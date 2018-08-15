@@ -3,9 +3,15 @@ module.exports = grammar({
 
   rules: {
     source_file: $ => $.node,
-    node: $ => choice($.unary, $.number),
+    node: $ => choice($.binary, $.unary, $.number),
+
+    binary: $ => seq($.node, choice($.plus_op, $.minus_op), $.node),
+    plus_op: $ => '+',
+    minus_op: $ => '-',
+
     unary: $ => seq($.negative_op, $.node),
     negative_op: $ => '-',
+
     number: $ => /(0|[1-9]\d+)/
   }
 });
