@@ -12,6 +12,6 @@ module.exports = grammar({
     unary: $ => prec(2, seq($.negative_op, $.node)),
     negative_op: $ => '-',
 
-    number: $ => /(0|[1-9]\d+)/
+    number: $ => /(0|[1-9]\d*)/
   }
 });
