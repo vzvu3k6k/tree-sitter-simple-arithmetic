@@ -1,0 +1,9 @@
+==================
+parenthesized
+==================
+
+(1 + 2) * 3
+
+---
+
+(source_file (node (binary (node (parenthesized (node (binary (node (number)) (plus_op) (node (number)))))) (mul_op) (node (number)))))

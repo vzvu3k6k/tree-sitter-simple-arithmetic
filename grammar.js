@@ -3,7 +3,9 @@ module.exports = grammar({
 
   rules: {
     source_file: $ => $.node,
-    node: $ => choice($.binary, $.unary, $.number),
+    node: $ => choice($.parenthesized, $.binary, $.unary, $.number),
+
+    parenthesized: $ => seq('(', $.node, ')'),
 
     binary: $ => choice(
       prec.left(1, seq($.node, choice($.plus_op, $.minus_op), $.node)),
