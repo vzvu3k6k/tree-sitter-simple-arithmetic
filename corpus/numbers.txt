@@ -26,4 +26,4 @@ preceding zero
 
 ---
 
-(source_file (node (number)) (ERROR (UNEXPECTED '\n')))
+(source_file (ERROR (node (number))) (node (number)))

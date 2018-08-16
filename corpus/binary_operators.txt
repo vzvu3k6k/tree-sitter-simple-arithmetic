@@ -6,4 +6,4 @@ plus
 
 ---
 
-(source_file (node (binary (node number) (binary_plus_operator) (node (number)))))
+(source_file (node (binary (node (number)) (plus_op) (node (number)))))
