@@ -5,11 +5,16 @@ module.exports = grammar({
     source_file: $ => $.node,
     node: $ => choice($.binary, $.unary, $.number),
 
-    binary: $ => prec.left(1, seq($.node, choice($.plus_op, $.minus_op), $.node)),
+    binary: $ => choice(
+      prec.left(1, seq($.node, choice($.plus_op, $.minus_op), $.node)),
+      prec.left(2, seq($.node, choice($.mul_op, $.div_op), $.node)),
+    ),
     plus_op: $ => '+',
     minus_op: $ => '-',
+    mul_op: $ => '*',
+    div_op: $ => '/',
 
-    unary: $ => prec(2, seq($.negative_op, $.node)),
+    unary: $ => prec(3, seq($.negative_op, $.node)),
     negative_op: $ => '-',
 
     number: $ => /(0|[1-9]\d*)/

@@ -7,3 +7,40 @@ plus
 ---
 
 (source_file (node (binary (node (number)) (plus_op) (node (number)))))
+
+==================
+minus
+==================
+
+1 - 2
+
+---
+
+(source_file (node (binary (node (number)) (minus_op) (node (number)))))
+
+==================
+multiple operators
+==================
+
+1 + 2 * 3 - 5 / 6
+
+---
+
+(source_file
+  (node
+    (binary
+      (node
+        (binary
+          (node (number))
+          (plus_op)
+          (node
+            (binary
+              (node (number))
+              (mul_op)
+              (node (number))))))
+      (minus_op)
+      (node
+        (binary
+          (node (number))
+          (div_op)
+          (node (number)))))))
